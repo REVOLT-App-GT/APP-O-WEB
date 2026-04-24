@@ -1,1 +1,195 @@
-C:\Users\Misael\Documents\App REVOL-T\prueba.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVOLT - Misael Juan</title>
+    <style>
+        :root { --primary: #ffcc00; --bg: #000; --card: #121212; --text-dim: #888; }
+        
+        * { box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--bg); color: white; margin: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+
+        /* --- ESTADO DE CONEXIÓN --- */
+        #online-status {
+            background: #2ecc71; color: black; text-align: center; font-size: 12px; 
+            padding: 2px; display: none; font-weight: bold;
+        }
+
+        /* --- HEADER --- */
+        .header-ui { display: flex; padding: 15px 20px; background: var(--bg); border-bottom: 1px solid #222; align-items: center; z-index: 100; }
+        .search-bar { flex: 1; background: #1a1a1a; border: 1px solid #333; color: white; padding: 10px 15px; border-radius: 20px; outline: none; }
+        
+        /* --- NAVEGACIÓN PRINCIPAL --- */
+        .main-content { flex: 1; overflow-y: auto; padding-bottom: 100px; position: relative; }
+        .block-section { display: none; padding: 15px; animation: fadeIn 0.4s ease; }
+        .active-block { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- FEED DE VIDEO --- */
+        .video-card { position: relative; background: #111; border-radius: 24px; height: 75vh; max-width: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #222; }
+        .side-actions { position: absolute; right: 15px; bottom: 80px; display: flex; flex-direction: column; gap: 20px; }
+        .action-btn { background: rgba(30, 30, 30, 0.8); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 20px; }
+
+        /* --- SECCIÓN LIVE (EN VIVO) --- */
+        .live-indicator { background: red; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; position: absolute; top: 20px; left: 20px; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.5; } }
+
+        /* --- PODCAST --- */
+        .podcast-card { background: #1a1a1a; padding: 15px; border-radius: 15px; margin-bottom: 10px; display: flex; align-items: center; gap: 15px; border-left: 5px solid var(--primary); }
+        .play-btn { background: var(--primary); border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+
+        /* --- PERFIL Y WALLET --- */
+        .glass-card { background: linear-gradient(145deg, #1a1a1a, #050505); padding: 25px; border-radius: 24px; text-align: center; border: 1px solid #333; margin-bottom: 15px; }
+        .stats { display: flex; justify-content: space-around; margin-top: 20px; }
+        .btn-gold { width: 100%; padding: 15px; border-radius: 15px; border: none; background: var(--primary); font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .btn-gold:active { transform: scale(0.98); }
+
+        /* --- BARRA DE NAVEGACIÓN INFERIOR --- */
+        .nav-bar { 
+            position: fixed; bottom: 0; width: 100%; height: 85px; background: rgba(0,0,0,0.95); 
+            display: flex; justify-content: space-around; align-items: center; border-top: 1px solid #222; z-index: 9999; 
+        }
+        .nav-link { text-align: center; color: #666; cursor: pointer; flex: 1; transition: 0.3s; -webkit-tap-highlight-color: transparent; }
+        .nav-link.active { color: var(--primary); }
+        .nav-ico { font-size: 22px; display: block; }
+        .nav-link small { font-size: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="online-status">CONECTADO A REVOLT</div>
+
+    <header class="header-ui">
+        <input type="text" class="search-bar" placeholder="Buscar en REVOLT...">
+        <div style="margin-left: 15px; cursor: pointer;" onclick="openBlock('p-notif')">🔔</div>
+    </header>
+
+    <main class="main-content">
+        <section id="p-home" class="block-section active-block">
+            <div class="video-card">
+                <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: #333;">[ REPRODUCTOR DE VIDEO ]</div>
+                <div class="side-actions">
+                    <button class="action-btn" onclick="this.style.color='red'">❤️</button>
+                    <button class="action-btn">💬</button>
+                    <button class="action-btn">🔗</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="p-live" class="block-section">
+            <h2 style="color: var(--primary);">Batalla LIVE</h2>
+            <div class="video-card" style="height: 60vh; background: #050505;">
+                <span class="live-indicator">EN VIVO</span>
+                <div style="display:flex; height: 100%; width: 100%;">
+                    <div style="flex:1; border-right: 1px solid #222; display:flex; align-items:center; justify-content:center;">Atleta A</div>
+                    <div style="flex:1; display:flex; align-items:center; justify-content:center;">Atleta B</div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-dim);">2.5k viendo ahora</p>
+        </section>
+
+        <section id="p-podcast" class="block-section">
+            <h2 style="color: var(--primary);">REVOLT Podcast</h2>
+            <div class="podcast-card">
+                <button class="play-btn">▶</button>
+                <div><b>Ep. 12: Nutrición Deportiva</b><br><small>Con Dr. Misael • 45 min</small></div>
+            </div>
+            <div class="podcast-card">
+                <button class="play-btn">▶</button>
+                <div><b>Ep. 11: Mentalidad Ganadora</b><br><small>Entrevista Pro • 38 min</small></div>
+            </div>
+        </section>
+
+        <section id="p-profile" class="block-section">
+            <div class="glass-card">
+                <div style="width: 80px; height: 80px; background: var(--primary); border-radius: 50%; margin: 0 auto 15px; color: black; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: bold;">M</div>
+                <h3 style="margin: 0;">Misael Juan</h3>
+                <p style="color: var(--text-dim); font-size: 14px;">Educación Física & Tech</p>
+                <div class="stats">
+                    <div><b>1.2k</b><br><small>Fans</small></div>
+                    <div><b>850</b><br><small>Votos</small></div>
+                    <div><b>10</b><br><small>Retos</small></div>
+                </div>
+            </div>
+            <button class="btn-gold" style="background: #222; color: white;">CONFIGURACIÓN</button>
+        </section>
+
+        <section id="p-cash" class="block-section">
+            <div class="glass-card">
+                <p style="color: var(--text-dim); margin: 0;">SALDO DISPONIBLE</p>
+                <h1 style="font-size: 48px; margin: 10px 0;">Q 275.50</h1>
+                <button class="btn-gold" onclick="alert('Procesando cobro a tu cuenta...')">COBRAR AHORA</button>
+            </div>
+            <div style="padding: 10px; background: #111; border-radius: 12px; font-size: 14px;">
+                <div style="display: flex; justify-content: space-between; padding: 10px;">
+                    <span>Regalo de Live</span><span>+ Q 50.00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="nav-bar">
+        <div class="nav-link active" onclick="openBlock('p-home', this)">
+            <span class="nav-ico">🏠</span><small>Inicio</small>
+        </div>
+        <div class="nav-link" onclick="openBlock('p-live', this)">
+            <span class="nav-ico">⚔️</span><small>Live</small>
+        </div>
+        <div class="nav-link" onclick="openBlock('p-podcast', this)">
+            <span class="nav-ico">🎙️</span><small>Podcast</small>
+        </div>
+        <div class="nav-link" onclick="openBlock('p-profile', this)">
+            <span class="nav-ico">👤</span><small>Perfil</small>
+        </div>
+        <div class="nav-link" onclick="openBlock('p-cash', this)">
+            <span class="nav-ico">💰</span><small>Cobrar</small>
+        </div>
+    </nav>
+
+    <script>
+        // FUNCIÓN DE NAVEGACIÓN (CORREGIDA PARA CLICS)
+        function openBlock(blockId, element) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.block-section').forEach(sec => {
+                sec.classList.remove('active-block');
+            });
+
+            // Mostrar la seleccionada
+            const target = document.getElementById(blockId);
+            if (target) {
+                target.classList.add('active-block');
+                window.scrollTo(0,0);
+            }
+
+            // Cambiar estado visual de iconos
+            if (element) {
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                element.classList.add('active');
+            }
+        }
+
+        // VERIFICACIÓN DE INTERNET INTEGRADA
+        function checkConnection() {
+            const statusLabel = document.getElementById('online-status');
+            if (navigator.onLine) {
+                statusLabel.style.display = 'block';
+                statusLabel.style.background = '#2ecc71';
+                statusLabel.innerText = 'CONECTADO A REVOLT';
+                setTimeout(() => { statusLabel.style.display = 'none'; }, 3000);
+            } else {
+                statusLabel.style.display = 'block';
+                statusLabel.style.background = '#e74c3c';
+                statusLabel.innerText = 'SIN CONEXIÓN - MODO LOCAL';
+            }
+        }
+
+        window.addEventListener('online', checkConnection);
+        window.addEventListener('offline', checkConnection);
+        
+        // Ejecutar al iniciar
+        checkConnection();
+    </script>
+</body>
+</html>
