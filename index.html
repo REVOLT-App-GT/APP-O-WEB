@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVOLT Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <header class="app-header">
+            <div id="net-status"><span id="dot"></span> <span id="net-text">...</span></div>
+            <div class="logo">REVOLT</div>
+            <div id="notif">🔔 <span id="notif-num">0</span></div>
+        </header>
+
+        <main id="main-feed">
+            </main>
+
+        <nav class="bottom-nav">
+            <button onclick="router('inicio')">Inicio</button>
+            <button onclick="router('aprender')">Aprender</button>
+            <button onclick="router('live')">Live</button>
+            <button onclick="router('podcast')">Podcast</button>
+            <button onclick="router('cobrar')">Cobrar</button>
+            <button onclick="router('perfil')">Perfil</button>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
