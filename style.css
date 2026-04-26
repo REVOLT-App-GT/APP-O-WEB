@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Fondo oscuro moderno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ffcc00; /* Amarillo REVOLT */
+}
+
+.checkbox-group {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.btn-registro {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Verde éxito */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-registro:active {
+    transform: scale(0.97); /* Efecto de pulsación en móvil */
+}
+
+.btn-registro:hover {
+    background-color: #218838;
+}
+.banner-offline {
+    display: none; /* Escondido por defecto */
+    background-color: #ffcc00; /* Tu dorado */
+    color: #000; /* Texto negro para contraste */
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    font-family: sans-serif;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
