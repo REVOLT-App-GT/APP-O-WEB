@@ -1,0 +1,62 @@
+:root {
+    --bg: #ffe600;
+    --card: #4287e7;
+    --cyan: #3cff00;
+    --pink: #ff0000;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#status-bar { margin-bottom: 20px; font-size: 0.9rem; }
+#dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; background: gray; margin-right: 5px; }
+
+.auth-container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 350px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: #f3f4f7;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cyan);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-color { background: #f71d00; }
+
+.btn-main:hover { opacity: 0.8; }
+
+a { color: var(--cyan); text-decoration: none; font-size: 0.9rem; }
+
+#mensaje-status { font-weight: bold; margin-top: 15px; min-height: 20px; }
