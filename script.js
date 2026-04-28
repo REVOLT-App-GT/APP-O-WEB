@@ -73,7 +73,6 @@ document.getElementById('registro-form').addEventListener('submit', async (e) =>
         msg.style.color = "red";
     }
 });
-import { auth } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 // Función para registrar usuario
