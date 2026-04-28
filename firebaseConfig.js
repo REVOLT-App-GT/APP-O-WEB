@@ -1,13 +1,9 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// El resto del código se queda igual...
 const firebaseConfig = {
-  apiKey: "AIzaSyADgdGdN4iPwmf8vL1EdYHZflS9XpB6Nt0",
+  apiKey: "AIzaSyADgdGdN4iPwmf8vL1EdYHZf1S9XpB6Nt0",
   authDomain: "revol-t-51396.firebaseapp.com",
   projectId: "revol-t-51396",
   storageBucket: "revol-t-51396.firebasestorage.app",
@@ -19,3 +15,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export { app };
