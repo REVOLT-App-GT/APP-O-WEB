@@ -105,8 +105,7 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
         msg.style.color = "orange";
         await signInWithEmailAndPassword(auth, email, pass);
         msg.innerText = "¡Bienvenido!";
-        window.location.href =
-        "dashboard.html"
+        window.location.href ="dashboard.html"
         msg.style.color = "cyan";
     } catch (error) {
         msg.innerText = "Correo o clave incorrectos";
