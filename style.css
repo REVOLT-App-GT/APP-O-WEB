@@ -1,0 +1,134 @@
+:root {
+    --bg: #ffe600;
+    --card: #4287e7;
+    --cyan: #3cff00;
+    --pink: #ff0000;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#status-bar { margin-bottom: 20px; font-size: 0.9rem; }
+#dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; background: gray; margin-right: 5px; }
+.auth-container {
+    background: var(--card);
+    padding: 1.2rem; /* Reducido de 2rem a 1.2rem para que sea menos alto */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 90%;      /* Usamos porcentaje para que se adapte al ancho del celular */
+    max-width: 320px; /* Evita que se vea muy ancho, limitándolo a 320px */
+    text-align: center;
+    color: white;
+    margin: 0 auto;  /* Lo mantiene centrado */
+}
+input {
+    width: 100%;
+    padding: 10px; /* Reducido de 12px a 10px */
+    margin: 8px 0;  /* Reducido de 10px a 8px */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 0.9rem; /* Un poco más pequeña la letra para ahorrar espacio */
+}
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--cyan);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-color { background: #f71d00; }
+
+.btn-main:hover { opacity: 0.8; }
+
+a { color: var(--cyan); text-decoration: none; font-size: 0.9rem; }
+
+#mensaje-status { font-weight: bold; margin-top: 15px; min-height: 20px; }
+:root {
+    --card: #22a6b3;
+    --bg: #f0932b;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#status-bar {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: gray; /* Cambiará por JS */
+}
+
+.auth-container {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn-main {
+    width: 100%;
+    padding: 12px;
+    background: #4cd137;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login-color { background: #4834d4; }
+
+#mensaje-status {
+    margin-top: 15px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+img {
+    object-fit: contain; /* Para que no se corte */
+    border-radius: 10px; /* Si quieres que las esquinas sean suaves */
+}
