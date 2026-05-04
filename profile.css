@@ -1,0 +1,41 @@
+:root {
+    --bg-dark: #0a0e14;
+    --card-bg: #151c26;
+    --accent-green: #00f2ff; /* Ajusta al verde de tu logo */
+    --text-gray: #a0aec0;
+}
+
+.edit-profile-container {
+    display: flex;
+    gap: 2rem;
+    background: var(--bg-dark);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.profile-form {
+    background: var(--card-bg);
+    padding: 2rem;
+    flex: 1;
+    border-radius: 15px;
+}
+
+.input-box input, .input-box textarea, .input-box select {
+    width: 100%;
+    background: #1a222f;
+    border: 1px solid #2d3748;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background: var(--accent-green);
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
