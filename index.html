@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVOLT - Bienvenida</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <header>
+            <h1 class="logo">REVOLT</h1>
+            <p>Conecta con el mundo</p>
+        </header>
+  <section id="auth-section">
+    <input type="email" id="email" placeholder="Correo electrónico" class="input-field">
+    <input type="password" id="password" placeholder="Contraseña" class="input-field">
+    <button id="btnLogin">Entrar</button>
+    <button id="btnRegistro" style="background: none; color: white; border: none; cursor: pointer; margin-top: 10px;">Crear cuenta nueva</button>
+</section>
+
+        <footer>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+        </footer>
+    </div>
+    
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+<script src="js/firebase-config.js"></script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Reset básico para que todo se vea igual en cualquier navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #050505; /* Un negro más profundo */
+}
+
+header {
+    background-color: #313331;
+    color: rgb(255, 251, 0);
+    padding: 1rem;
+    text-align: center;
+}

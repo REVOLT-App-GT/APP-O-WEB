@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVOLT-T | Multimedia Hub</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div id="connection-status" class="status-banner"></div>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <h1 class="brand">REVOLT-T</h1>
+            <nav class="menu">
+                <a href="#" class="active">🏠 Inicio</a>
+                <a href="#">🎓 Aprender</a>
+                <a href="#">📺 Live</a>
+                <a href="#">🔥 Tendencias</a>
+                <a href="#">🔔 Notificaciones</a>
+                <a href="#">👤 Perfil</a>
+                <hr>
+                <a href="#">💰 Mis Ingresos</a>
+                <a href="#">📊 Estadísticas</a>
+            </nav>
+            <button class="btn-logout" onclick="window.location.href='index.html'">Cerrar Sesión</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar contenido multimedia..." id="searchInput">
+                </div>
+            </header>
+
+            <section class="stats-header">
+                <div class="stat-card">
+                    <span class="stat-label">SEGUIDORES</span>
+                    <h2 class="stat-value">1,240</h2>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">GANANCIAS (75%)</span>
+                    <h2 class="stat-value">$850</h2>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">META SEMANAL</span>
+                    <h2 class="stat-value">85%</h2>
+                </div>
+            </section>
+
+<div class="feed" id="feedScroll">
+    <div class="video-container">
+        <video class="revoltVideo" loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-vertical-video-of-a-city-at-night-by-the-river-42352-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <p>@misaeljuan • Ciudad Nocturna 🌃</p>
+            <div class="interactions">
+                <span class="like-btn">❤️ 12.4k</span>
+                <span>💬 890</span>
+                <span>🚀 Compartir</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video class="revoltVideo" loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <p>@revolt_t • Relax Multimedia 🌊</p>
+            <div class="interactions">
+                <span class="like-btn">❤️ 8.2k</span>
+                <span>💬 120</span>
+                <span>🚀 Compartir</span>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="profile-section" style="display: none; padding: 20px;">
+    <div class="profile-header">
+        <div class="profile-avatar">MJ</div>
+        <div class="profile-info">
+            <h2 id="profile-name">Misael Juan</h2>
+            <p>@misaeljuan • Desarrollador de REVOLT-T</p>
+            <div class="profile-stats">
+                <span><strong>1,240</strong> Seguidores</span>
+                <span><strong>45</strong> Siguiendo</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="profile-tabs">
+        <button class="active">Videos</button>
+        <button>Favoritos</button>
+    </div>
+
+    <div class="profile-grid">
+        <div class="video-thumb">Video 1</div>
+        <div class="video-thumb">Video 2</div>
+        <div class="video-thumb">Video 3</div>
+    </div>
+</section>
+        </main>
+    </div>
+    <script src="js/feed.js"></script>
+</body>
+</html>
